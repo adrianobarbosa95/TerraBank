@@ -20,20 +20,21 @@ height: 2vh;
 .card {
   border-radius: 5px;
   box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
-  padding: 30px;
+  padding: 10px;
   margin: 20px;
   width: 50vw;
   transition: all 0.3s ease-out;
   background-color: #fff;
+  text-align: center;
 }
 .card:hover {
   transform: translateY(-5px);
   cursor: pointer;
 }
  
-.card p {
+.card h1 {
   color: #a3a5ae;
-  font-size: 16px;
+  /* font-size: 16px; */
 }
  
 .blue {
@@ -58,11 +59,60 @@ height: 2vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+align-items: center;
   width: 100%;
   text-align: center;
 }
-.title p{
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+   /* width: 70%; */
+  /* text-align: center; */
+  align-items: center;
+  margin-top: 40px;;
+ 
+}
+
+
+.button{
+
+  background-color: #008CBA; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.btn{
+  background-color: #f44336; /* Green */
+}
+.itemform{
+margin-bottom: 10px;
+font-size: 12pt;
+padding: 5px;
+border: none;
+box-shadow: 0 0 0 0;
+outline: 0;
+width: 70%;
+}
+.button:hover{
+  cursor: pointer;
+  background: none;
+  border: #000000 solid 1px;
+  color: #000;
+
+}
+.itemform:focus{
+ 
+  border-bottom: #000 solid 1px;
+}
+
+
+
+.title h1{
 
   color: #fff;
   font-size: 18pt;
@@ -125,9 +175,14 @@ main {
 }
 footer {
   background-color: #0a2647;
-  height: 25vh;
+  height: auto;
   text-decoration:  none;
+  color: #fff;
+  text-align: center;
+padding: 15px;
 }
+
+footer div{}
 
 /* Nova classe a ser atribuída ao elemento com os estilos desejados */
 .changeStyle {

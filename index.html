@@ -9,9 +9,9 @@
     <script src="./assets/script.js" async></script>
     <link rel="stylesheet" href="./assets/style.css" />
     <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap"
-    rel="stylesheet"
-  />
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -19,7 +19,7 @@
       <nav id="nav" class="nav">
         <div class="itens title">
           <img src="./assets/img/logo.png" alt="Logo TerraBank" srcset="" class="logo" />
-          <p id="nomeLogo">TerraBank</p>
+          <h1 id="nomeLogo">TerraBank</h1>
         </div>
       </nav>
       <!-- fim barra horizontal de titulos -->
@@ -34,13 +34,35 @@
         <i class="fa fa-chevron-circle-right"></i>
       </button>
       <!-- fim expansor  -->
-      <div >
+      <div>
         <div class="card blue">
-      
+          <h2>Cadastro</h2>
+          <p>Preencha os campos corretamente</p>
+
+          <form action="#" id="form" class="form">
+             
+
+           
+            <input type="text" class="itemform" autofocus name="nome" id="nome" placeholder="Nome" />
+            <input type="text" class="itemform" name="cpf" id="cpf" placeholder="CPF" />
+            <input type="text" class="itemform" name="celular" id="celular" placeholder="Celular" />
+            <input type="password" class="itemform" name="senha" id="senha" placeholder="Senha" />
+            <input type="password" class="itemform" name="comfirmed_senha" id="confirmed_senha" placeholder="Confirme senha" />
+         
+          <div>
+            <button class="button">Limpar</button>
+            <input type="submit" class="button btn" value="Enviar" />
+          </div>
+          </form>
         </div>
       </div>
     </main>
 
-    <footer>ll</footer>
+    <footer>
+      <div>
+        <h3>O BANCO DA TERRA</h3>
+        <p>Desenvolvido por Adriano Barbosa - © 2023</p>
+      </div>
+    </footer>
   </body>
 </html>
