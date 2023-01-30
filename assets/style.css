@@ -1,0 +1,136 @@
+/* fundo do backgraud e remocao das margens */
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #14417231;
+  font-family: "Poppins", sans-serif;
+}
+/* header{
+width: 100vw;
+height: 2vh;
+} */
+/* container card */
+
+/* ########################## CARD ########################### */
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  border-radius: 5px;
+  box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+  padding: 30px;
+  margin: 20px;
+  width: 50vw;
+  transition: all 0.3s ease-out;
+  background-color: #fff;
+}
+.card:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+ 
+.card p {
+  color: #a3a5ae;
+  font-size: 16px;
+}
+ 
+.blue {
+  border-left: 3px solid #4895ff;
+}
+/* ########################## FIM CARD ##################3########## */
+
+/* Navbar - cores e dimenções */
+.nav {
+  background-color: #144272;
+  height: auto;
+  min-height: 30px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  /* box-shadow: 0 0 1em gray; */
+  list-style-type: none;
+  transition: background-color 0.3s ease-in-out;
+}
+/* criando conteudo do navbar - flex */
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+.title p{
+
+  color: #fff;
+  font-size: 18pt;
+}
+ /* configurando logo  */
+nav img.logo {
+  height: 4vw;
+  width: 4vw;
+  min-width: 30px;
+  min-height: 30px;
+  padding-right: 1%;
+}
+/* itens do navbar dando espaço entre elementos */
+.itens {
+  /* padding: 1%; */
+}
+/* menu principal  */
+#principal{
+position: fixed;
+height: 100vh;
+width: 20vw;
+background-color: #e5e0ff;
+box-shadow: 0 0 1em gray;
+display: none;
+transition: display 2.9s ease-in-out;
+
+}
+
+/* botao flutuante do navbar principal*/
+.float{
+	position:fixed;
+	width:40px;
+	height:40px;
+	bottom:45%;
+	left: -5px;
+	
+	/* background-color:#14417259; */
+	color:rgba(255, 255, 255, 0.699);
+	border-radius:50px;
+	text-align:center;
+	/* box-shadow: 2px 2px 3px #999; */
+  border: none;
+  font-size: 2.3em;
+  background: none;
+  display: block;
+
+}
+.float:hover{ 
+ 
+  cursor: pointer;
+  color: #144272;
+}
+.mostrar{
+left: calc(20vw - 25px);
+
+} 
+
+main {
+  height: 100vh;
+}
+footer {
+  background-color: #0a2647;
+  height: 25vh;
+  text-decoration:  none;
+}
+
+/* Nova classe a ser atribuída ao elemento com os estilos desejados */
+.changeStyle {
+  background-color: #e5e0ff;
+  box-shadow: 0 0 1em gray;
+}
