@@ -24,7 +24,12 @@
       </nav>
       <!-- fim barra horizontal de titulos -->
       <!-- menu principal  -->
-      <nav id="principal"></nav>
+      <nav id="principal">
+        <div class="container">
+          <button id="cadastro" class="btnItem button">Cadastro</button>
+          <button id="operacao" class="btnItem button">Operação</button>
+        </div>
+      </nav>
       <!-- fim menu principal  -->
     </header>
 
@@ -34,7 +39,10 @@
         <i class="fa fa-chevron-circle-right"></i>
       </button>
       <!-- fim expansor  -->
-      <div>
+
+      <!-- card cadastro -->
+
+      <div id="card">
         <div class="card blue">
           <h2>Cadastro</h2>
           <p>Preencha os campos corretamente</p>
@@ -53,8 +61,34 @@
             />
 
             <div>
-              <input type="reset" class="button" id="limpar" value="Limpar"/>
+              <input type="reset" class="button" id="limpar" value="Limpar" />
               <input type="submit" id="enviar" class="button btn" value="Enviar" />
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- card operaçoes -->
+
+      <div id="card2">
+        <div class="card verde">
+          <h2>Operacao</h2>
+          <p>Preencha os campos corretamente</p>
+
+          <form action="#" id="form2" class="form">
+            <input type="text" class="itemform" name="conta" id="conta" placeholder="Informe a conta" />
+
+            Operacao
+            <select class="itemform" name="op" id="op">
+              <option value="saque">Saque</option>
+              <option value="deposito">Deposito</option>
+              <option value="saldo">Consultar saldo</option>
+            </select>
+            <input type="number" class="itemform" name="valor" id="valor"  step="0.01" placeholder="Qual Valor?" />
+            <input type="password" class="itemform" name="senha" id="senha" placeholder="Informe a senha" />
+            <div>
+              <input type="reset" class="button" id="limpar2" value="Limpar" />
+              <input type="submit" id="confirmar" class="button btn" value="Confirmar" />
             </div>
           </form>
         </div>
