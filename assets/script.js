@@ -65,9 +65,49 @@ cadastro.addEventListener('click', () => {
   card.style.display = 'block';
 });
 
-op.addEventListener('change', (event) =>  event.target.value =='saldo'? 
-document.getElementById('valor').disabled =true :
-document.getElementById('valor').disabled = false
-
+op.addEventListener('change', (event) =>
+  event.target.value == 'saldo'
+    ? (document.getElementById('valor').disabled = true)
+    : (document.getElementById('valor').disabled = false)
 );
 
+confirmar.addEventListener('click', (event) => {
+  event.preventDefault();
+
+  const contaInformada = form2.conta.value.trim();
+  const senha = form2.pass.value.trim();
+  const op = form2.op.value.trim();
+
+  if (
+    (contaachada = conta.find((el) => {
+      return el.conta == parseInt(contaInformada);
+    }))
+  ) {
+    if (contaachada.senha == senha) {
+      if (op == 'saque') {
+        sacar();
+      }
+      if (op == 'deposito') {
+        depositar();
+      }
+      if (op == 'saldo') {
+      consultar();
+      
+      }
+    } else {
+      alert('senha não confere');
+      return;
+    }
+  } else alert('Conta Inexistene!');
+});
+
+function depositar(parameters) {
+  alert('senha cofere conta encontrada deposito ');
+}
+function sacar(params) {
+  alert('senha cofere conta encontrada saque ');
+}
+
+function consultar(params) {
+  alert('senha cofere conta encontrada salso');
+}
