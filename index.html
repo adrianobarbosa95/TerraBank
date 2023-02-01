@@ -48,12 +48,12 @@
           <p>Preencha os campos corretamente</p>
 
           <form action="#" id="form" class="form">
-            <input type="text" class="itemform" autofocus name="nome" id="nome" placeholder="Nome" />
-            <input type="text" class="itemform" name="cpf" id="cpf" placeholder="CPF" />
-            <input type="text" class="itemform" name="celular" id="celular" placeholder="Celular" />
-            <input type="password" class="itemform" name="senha" id="senha" placeholder="Senha" />
+            <input type="text" class="itemform" autofocus required="required" name="nome" id="nome" placeholder="Nome" />
+            <input type="text" class="itemform" name="cpf" required="required" id="cpf" placeholder="CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite um CPF no formato: xxx.xxx.xxx-xx" />
+            <input type="text" class="itemform" name="celular" required="required" id="celular" placeholder="Celular" pattern="(\([0-9]{2}\))\s([0-9]{5})-([0-9]{4})" title="Número de telefone precisa ser no formato (99) 99999-9999" />
+            <input type="password" class="itemform" name="senha" required="required" id="senha" placeholder="Senha" />
             <input
-              type="password"
+              type="password" required
               class="itemform"
               name="comfirmed_senha"
               id="confirmed_senha"
@@ -76,16 +76,16 @@
           <p>Preencha os campos corretamente</p>
 
           <form action="#" id="form2" class="form">
-            <input type="text" class="itemform" name="conta" id="conta" placeholder="Informe a conta" />
+            <input type="text" class="itemform" required name="conta" id="conta" placeholder="Informe a conta" />
 
             Operacao
-            <select class="itemform" name="op" id="op">
+            <select class="itemform" required name="op" id="op">
               <option value="saque">Saque</option>
               <option value="deposito">Deposito</option>
               <option value="saldo">Consultar saldo</option>
             </select>
             <input type="number" class="itemform" name="valor" id="valor"  step="0.01" placeholder="Qual Valor?" />
-            <input type="password" class="itemform" name="pass" id="pass" placeholder="Informe a senha" />
+            <input type="password" required class="itemform" name="pass" id="pass" placeholder="Informe a senha" />
             <div>
               <input type="reset" class="button" id="limpar2" value="Limpar" />
               <input type="submit" id="confirmar" class="button btn" value="Confirmar" />

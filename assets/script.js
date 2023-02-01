@@ -42,7 +42,7 @@ enviar.addEventListener('click', (event) => {
     alert('nome vazio');
   } else if (cpf.length != 14) {
     alert('cpf incorreto');
-  } else if (celular.length != 11) {
+  } else if (celular.length != 15) {
     alert('celular incorreto');
   } else if (!senha) {
     alert('senha vazia');
@@ -50,7 +50,7 @@ enviar.addEventListener('click', (event) => {
     alert('senhas diferentes');
   } else {
     const id = new Date().getTime();
-    conta.push({ nome: nome, cpf: cpf, celular: celular, senha: senha, conta: id, saldo: 0 });
+    conta.push({ nome: nome, cpf: cpf, celular: celular, senha: senha, conta: id, saldo: 0.0 });
     alert('Conta criada com sucesso! ' + id);
     form.reset();
   }
@@ -76,6 +76,7 @@ confirmar.addEventListener('click', (event) => {
 
   const contaInformada = form2.conta.value.trim();
   const senha = form2.pass.value.trim();
+  const vl = parseFloat(form2.valor.value.trim());
   const op = form2.op.value.trim();
 
   if (
@@ -85,14 +86,13 @@ confirmar.addEventListener('click', (event) => {
   ) {
     if (contaachada.senha == senha) {
       if (op == 'saque') {
-        sacar();
+        sacar(contaachada, vl);
       }
       if (op == 'deposito') {
-        depositar();
+        depositar(contaachada, vl);
       }
       if (op == 'saldo') {
-      consultar();
-      
+        consultar(contaachada);
       }
     } else {
       alert('senha não confere');
@@ -101,13 +101,34 @@ confirmar.addEventListener('click', (event) => {
   } else alert('Conta Inexistene!');
 });
 
-function depositar(parameters) {
-  alert('senha cofere conta encontrada deposito ');
+function depositar(conta, valor) {
+  if (valor > 0) {
+    conta.saldo += valor;
+    alert(
+      'Deposito de R$ ' +
+        valor +
+        ' realizado com sucesso na conta ' +
+        conta.conta +
+        ' de ' +
+        conta.nome +
+        ' o novo saldo é: R$ ' +
+        conta.saldo
+    );
+  } else alert('O valor deve maior que R$ 0');
 }
-function sacar(params) {
-  alert('senha cofere conta encontrada saque ');
+function sacar(conta, valor) {
+
+  if(valor>0){
+
+    if(conta.saldo>=valor){
+      conta.saldo-=valor;
+      alert('Saque de R$ '+valor+' realizado com sucesso! O novo saldo da conta ' + conta.conta + ' é: R$' + conta.saldo);}
+    else alert('Não foi possivel reealizar o saque, a conta não possui saldo suficiente, o valor disponivel é: R$ '+conta.saldo);
+  }
+  else alert('O valor deve maior que R$ 0');
+   
 }
 
-function consultar(params) {
-  alert('senha cofere conta encontrada salso');
+function consultar(conta) {
+  alert('Presado(a) ' + conta.nome + ' o saldo da conta ' + conta.conta + ' é: R$ ' + conta.saldo);
 }
